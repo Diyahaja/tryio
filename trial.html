@@ -1,0 +1,364 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Hubungi Kami</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&family=Rowdies&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&family=Nova+Square&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&family=Nova+Square&display=swap');
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Hedvig Letters Serif', serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #6a453b;
+      color: #e9e2ce;
+      z-index: 1000;
+      transition: background-color 0.5s ease-in-out;
+    }
+  
+    h1 {
+      margin: 0;
+    }
+  
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+  
+    nav ul li {
+      margin-right: 20px;
+    }
+  
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding-right: 10px;
+    }
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff; 
+      font-weight: bold;
+      padding-left: 20px;
+      font-family: 'Rowdies', sans-serif;
+      font-size: 20px;
+    }
+    
+    .logo img {
+      width: 50px; 
+      margin-right: 10px; 
+    }
+
+    .header a {
+      padding-left: 80px;
+    }
+    
+    main {
+      padding-top: 20px;
+      background-color: #e9e2ce;
+    }
+
+    .promo {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 70px;
+    }
+
+    .produk {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .produk-card {
+      background-color: white;
+      position: relative;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 50px;
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 4px 4px 10px #6a453b;
+    }
+
+    
+    
+    .produk-card h2 {
+      position: absolute;
+      top: 20px;
+      right: -35px;
+      background-color: #ffcc00;
+      color: #333;
+      transform: rotate(45deg);
+      padding: 5px 30px;
+      margin: 0;
+      z-index: 1;
+      font-size: 14px;
+    }
+    
+    .produk-card:hover h2 {
+      background-color: #e6b800;
+    }
+    
+    .produk-card img {
+      width: 100%;
+      height: 90%;
+      object-fit: cover;
+    }
+    
+    .produk-card .detail {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      z-index: 2;
+    }
+    .produk-card h3 {
+      color: #6a453b;
+    }
+
+    .produk-card p {
+      color: #6a453b;
+    }
+    .produk-card .detail p {
+      width: 300px;
+      margin: 5px;
+      color: #6a453b;
+    }
+    .produk-card .show-detail {
+      display: block;
+    }
+    
+    .btn-detail {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-top: 10px;
+      border: 1px solid #333;
+      border-radius: 3px;
+      background-color: #fff;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-detail:hover {
+      background-color: #6a453b;
+      color: #fff;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #6a453b;
+      color: #fff;
+      padding: 8px 0;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+      align-self: flex-end;
+    }
+    
+    .btn:hover {
+      background-color: #89655b;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #6a453b;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+    }
+    
+    .footer-left {
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-left img {
+      width: 50px;
+      margin-right: 10px;
+    }
+    
+    .social-icons {
+      display: flex;
+      align-items: center;
+    }
+    
+    .social-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      margin-right: 5px;
+      color: #333;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+    
+    .footer-right {
+      text-align: right;
+    }    
+    .footer-right h3 {
+      font-family: 'Rowdies', sans-serif;
+    }
+    .footer-right p {
+      font-family: 'Hedvig Letters Serif', serif;
+      font-size: 12px;
+    }
+    .footer-right img {
+      width: 35px;
+      margin-right: -10px;
+      margin-bottom: -10px;
+    }
+    
+    .social-icons {
+      display: flex;
+      align-items: center;
+    }
+    
+    .social-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      margin-right: 5px;
+      color: #333;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="./img/logo1.png" alt="AA">AA MEDIA</a>
+    <nav>
+      <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="catalog.html">Katalog</a></li>
+          <li><a href="pesan.php">Pesan</a></li>
+          <li><a href="bayar.html">Bayar</a></li>
+          <li><a href="trial.html">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="promo">
+      <h2>Hubungi Kami</h2>
+      <p>AA Media Rental TV LED.</p><br>
+    </section>
+    <section class="produk">
+      <div class="produk-card">
+       <img src="img/WhatsApp Image 2023-12-03 at 21.57.48_7f4c24b0.jpg" alt=>
+        <h3>Testimoni Di Berbagai Acara</h3>
+      </div>
+      <div class="produk-card">
+        <img src="img/IMG-20231203-WA0018.jpg" alt>
+        <h3>Pengajian</h3>
+      </div>
+      <div class="produk-card">
+        <img src="img/IMG-20231203-WA0014.jpg" alt=>
+        <h3>Seminar</h3>
+      </div>
+      <div class="produk-card">
+        <img src="img/IMG-20231203-WA0026.jpg" alt=>
+        <h3>Akhirussanah</h3>
+      </div>
+      <div class="produk-card">
+        <img src="img/IMG-20231203-WA0013.jpg" alt=>
+        <h3>Wedding</h3>
+      </div>
+      <div class="produk-card">
+        <img src="img/IMG-20231203-WA0011.jpg" alt=>
+        <h3>Lain lain</h3>
+        </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-left">
+      <img src="./img/logo1.png" alt="Logo Perusahaan">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f" ></i></a>
+        <a href="https://instagram.com/aamedia_official?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=6282117951221&text=Terima%20kasih%20telah%20menghubungi%20AAMedia%20Kudus.%20Silakan%20beri%20tahu%20apa%20yang%20dapat%20kami%20bantu"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <h3>AA MEDIA</h3>
+      
+      <p><img src="https://www.freepnglogos.com/uploads/lokasi-logo-png/lokasi-logo-map-pin-klaris-apartments-8.png" alt=>Desa Kaliwungu RT 06 RW 06 Kecamatan Kaliwungu Kabupaten Kudus.</p>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function() {
+      var header = document.querySelector('header');
+      var scrollPosition = window.scrollY;
+    
+      if (scrollPosition > 100) { 
+        header.style.backgroundColor = 'rgba(106, 69, 59, 0.7)'; 
+      } else {
+        header.style.backgroundColor = '#6a453b'; 
+      }
+    });
+    
+    const buttons = document.querySelectorAll('.btn-detail');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const detail = button.nextElementSibling;
+       
+        detail.classList.toggle('show-detail');
+        
+        
+        const closeButton = detail.querySelector('.close-btn');
+        closeButton.addEventListener('click', () => {
+          
+          detail.classList.remove('show-detail');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+

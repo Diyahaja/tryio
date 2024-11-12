@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Form Pembayaran</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&family=Rowdies&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&family=Nova+Square&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&family=Nova+Square&display=swap');
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Hedvig Letters Serif', serif;
+      line-height: 1.6;
+      background-color: #e9e2ce;
+    }
+  
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #6a453b;
+      color: #e9e2ce;
+      z-index: 1000;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding-right: 10px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff; /* Warna teks untuk logo */
+      font-weight: bold; /* Style teks yang lebih tebal */
+      padding-left: 20px;
+      font-family: 'Rowdies', sans-serif;
+      font-size: 20px;
+    }
+    
+    .logo img {
+      width: 50px; /* Atur lebar gambar sesuai kebutuhan */
+      margin-right: 10px; /* Jarak antara gambar dan teks */
+    }
+
+    .header a {
+      padding-left: 80px;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .main {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .main .back-button {
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #6a453b;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      display: block;
+      width: 89%;
+      margin-top: 20px;
+    }
+
+    .main .back-button:hover {
+      background-color: #6a453b;
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    label {
+      margin-top: 10px;
+      color: #555;
+    }
+    
+    input,
+    select,
+    button {
+      margin-top: 5px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 12px;
+      font-family: 'Hedvig Letters Serif', serif;
+      text-transform: uppercase;
+    }
+    
+    select {
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #6a453b;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #6a453b;
+    }
+    
+    .button {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    footer {
+      background-color: #6a453b;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Menyusun elemen secara vertikal di tengah */
+    }
+    
+    .footer-left {
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-left img {
+      width: 50px;
+      margin-right: 10px;
+    }
+    
+    .social-icons {
+      display: flex;
+      align-items: center;
+    }
+    
+    .social-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Menyusun ikon secara vertikal dan horisontal di tengah */
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      margin-right: 5px;
+      color: #333;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+    
+    .footer-right {
+      text-align: right;
+    }    
+    .footer-right h3 {
+      font-family: 'Rowdies', sans-serif;
+    }
+    .footer-right p {
+      font-family: 'Hedvig Letters Serif', serif;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="./img/logo1.png" alt="AA">AA MEDIA</a>
+    <nav>
+      <ul>
+        <li><a href="">Beranda</a></li>
+        <li><a href="catalog.html">Katalog</a></li>
+        <li><a href="pesan.php">Pesan</a></li>
+        <li><a href="bayar.html">Bayar</a></li>
+        <li><a href="trial.html">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br> <br> <br>
+  <div class="container">
+    <div class="main">
+      <h2>Form Pembayaran</h2>
+      <form action="process_payment.php" method="post" enctype="multipart/form-data" target="_blank">
+      <form action="https://api.whatsapp.com/send" method="get" target="_blank">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br>
+
+        <label for="telepon">Telepon:</label>
+        <input type="tel" id="telepon" name="telepon" required pattern="[0-9]{9,15}"><br>
+
+        <label for="foto">Upload Foto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required><br>
+
+        <!-- Hidden input fields for WhatsApp parameters -->
+        <input type="hidden" name="phone" value="+6285601220162">
+        <input type="hidden" name="image" value="">
+        <input type="hidden" name="text" value="Pesanan, Dengan Nama   Telepon   ">
+
+        <input type="submit" value="Bayar" class="button">
+      </form>
+      <a href="catalog.html" class="back-button">Back to Home</a>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-left">
+      <img src="./img/logo1.png" alt="Logo Perusahaan">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f" ></i></a>
+        <a href="https://instagram.com/aamedia_official?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=6282117951221&text=Terima%20kasih%20telah%20menghubungi%20AAMedia%20Kudus.%20Silakan%20beri%20tahu%20apa%20yang%20dapat%20kami%20bantu"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <h3>AA MEDIA</h3>
+      <p>Berlokasi di Desa Kaliwungu RT 06 RW 06 Kecamatan Kaliwungu Kabupaten Kudus.</p>
+      <p>Vendor penyewaan TV LED terbaik dan terpercaya di Kudus.</p>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function() {
+      var header = document.querySelector('header');
+      var scrollPosition = window.scrollY;
+    
+      if (scrollPosition > 100) { // Ubah angka sesuai dengan posisi scroll yang diinginkan
+        header.style.backgroundColor = 'rgba(106, 69, 59, 0.7)'; // Warna transparan saat discroll
+      } else {
+        header.style.backgroundColor = '#6a453b'; // Kembalikan ke warna latar belakang awal
+      }
+    });
+  </script>
+</body>
+</html>
